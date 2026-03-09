@@ -1,0 +1,126 @@
+:root{
+  --bg:#0b3b4f;
+  --text:#e9eef3;
+  --muted:#9fb3bf;
+  --accent:#f2c200;
+  --sidebar:#222;
+}
+
+*{ box-sizing:border-box; margin:0; padding:0; }
+body{
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial;
+  background: var(--bg);
+  color: var(--text);
+}
+
+.sidebar{
+  position: fixed;
+  left: 0; top: 0;
+  width: 72px; height: 100vh;
+  background: var(--sidebar);
+  display:flex;
+  flex-direction:column;
+  justify-content:space-between;
+  padding: 16px 10px;
+}
+
+.nav-btn{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  width: 52px; height: 52px;
+  margin: 10px auto;
+  border-radius: 10px;
+  text-decoration:none;
+  color:#bbb;
+  font-size: 22px;
+}
+.nav-btn.active{ color: var(--accent); }
+
+.sidebar-bottom .social{
+  display:block;
+  text-align:center;
+  margin: 14px 0;
+  color:#aaa;
+  text-decoration:none;
+  font-weight:700;
+}
+
+.main{
+  margin-left: 72px;
+  min-height: 100vh;
+  padding: 60px 80px;
+  position: relative;
+}
+
+.code-tag{
+  position:absolute;
+  left: 40px;
+  color: var(--accent);
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  font-style: italic;
+  opacity: 0.9;
+}
+.code-tag-top{ top: 30px; }
+.code-tag-bottom{ bottom: 30px; }
+
+.hero{
+  margin-top: 220px;
+  max-width: 900px;
+}
+
+.hello{
+  font-size: 64px;
+  font-weight: 800;
+  margin-bottom: 12px;
+}
+
+.title{
+  font-size: 68px;
+  line-height: 1.03;
+  font-weight: 900;
+}
+
+.accent{
+  color: var(--text);
+  position: relative;
+}
+.accent::after{
+  content:"";
+  position:absolute;
+  left: 6px;
+  bottom: 8px;
+  width: 18px;
+  height: 40px;
+  background: repeating-linear-gradient(
+    90deg,
+    var(--accent),
+    var(--accent) 2px,
+    transparent 2px,
+    transparent 4px
+  );
+  opacity: 0.9;
+  transform: translateX(-28px);
+}
+
+.subtitle{
+  margin-top: 22px;
+  color: var(--muted);
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  font-size: 14px;
+}
+
+.cta{
+  display:inline-block;
+  margin-top: 40px;
+  padding: 14px 34px;
+  border: 2px solid var(--accent);
+  color: var(--accent);
+  text-decoration:none;
+  font-weight: 800;
+  letter-spacing: 0.22em;
+}
+.cta:hover{
+  background: rgba(242,194,0,0.08);
+}
